@@ -93,6 +93,7 @@ function cadastrarAtleta(e) {
   atletas.push(atleta);
   salvarNoLocalStorage();
   atualizarListaAtletas();
+  atualizarEstatisticas()
   formAtleta.reset();
   document.getElementById('nome').focus();
 }
@@ -134,6 +135,7 @@ function limparAtletas() {
     salvarNoLocalStorage();
     atualizarListaAtletas();
     atualizarTimes();
+    atualizarEstatisticas()
   }
 }
 
@@ -318,7 +320,20 @@ function carregarDados() {
   }
   atualizarListaAtletas();
   atualizarTimes();
+  atualizarEstatisticas()
 }
 
 // Inicialização
 carregarDados();
+
+function atualizarEstatisticas() {
+  const totalAtletas = atletas.length;
+  const totalMensalistas = atletas.filter((a) => a.mensalista).length;
+  const totalAssiduos = atletas.filter((a) => a.assiduo).length;
+  const totalConvidados = atletas.filter((a) => a.convidado).length;
+
+  document.getElementById('totalAtletas').textContent = totalAtletas;
+  document.getElementById('totalMensalistas').textContent = totalMensalistas;
+  document.getElementById('totalAssiduos').textContent = totalAssiduos;
+  document.getElementById('totalConvidados').textContent = totalConvidados;
+}
