@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Atletas - Futebol dos Amigos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Cadastro de Atletas</h1>
+    <form id="formAtleta">
+      <div class="input-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required placeholder="Digite o nome do atleta">
+      </div>
+
+      <div class="input-group">
+        <label>Critérios:</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="mensalista" checked>
+          <label for="mensalista">Mensalista</label>
+          <input type="checkbox" id="assiduo" checked>
+          <label for="assiduo">Assíduo</label>
+          <input type="checkbox" id="convidado">
+          <label for="convidado">Convidado</label>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="posicao">Posição:</label>
+        <select id="posicao" required>
+          <option value="">Selecione...</option>
+          <option value="GOL">Goleiro (GOL)</option>
+          <option value="ZAG">Zagueiro (ZAG)</option>
+          <option value="LE">Lateral Esquerdo (LE)</option>
+          <option value="LD">Lateral Direito (LD)</option>
+          <option value="VOL">Volante (VOL)</option>
+          <option value="ME">Meio-Campo (ME)</option>
+          <option value="ATA">Atacante (ATA)</option>
+        </select>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <!-- filtros -->
+    <div class="filtros-minimalista">
+      <select id="filtroPosicao" class="filtro-input">
+        <option value="TODOS">Todas as posições</option>
+        <option value="GOL">Goleiro</option>
+        <option value="ZAG">Zagueiro</option>
+        <option value="LE">Lateral Esq.</option>
+        <option value="LD">Lateral Dir.</option>
+        <option value="VOL">Volante</option>
+        <option value="ME">Meio-Campo</option>
+        <option value="ATA">Atacante</option>
+      </select>
+
+      <select id="filtroCriterio" class="filtro-input">
+        <option value="TODOS">Todos os critérios</option>
+        <option value="MENSALISTA">Mensalista</option>
+        <option value="ASSIDUO">Assíduo</option>
+        <option value="AMBOS">Mensalista + Assíduo</option>
+      </select>
+      <button id="aplicarFiltro" class="filtro-botao">Filtrar</button>
+    </div>
+
+    <div>
+      <button id="limparLista" class="btn-limpar">Limpar Todos os Atletas</button>
+    </div>
+
+    <!-- Lista de Atletas (Parte 2) -->
+    <h2>Atletas Cadastrados</h2>
+    <div id="listaAtletas">
+      <ul id="atletasCadastrados"></ul>
+    </div>
+
+  </div>
+
+  <div class="times-container">
+    <div class="time" id="timeAzul">
+      <h3>Time Azul (0/11)</h3>
+      <ul class="jogadores-time"></ul>
+    </div>
+    <div class="time" id="timeAmarelo">
+      <h3>Time Amarelo (0/11)</h3>
+      <ul class="jogadores-time"></ul>
+    </div>
+    <div class="time" id="timeLaranja">
+      <h3>Time Laranja (0/11)</h3>
+      <ul class="jogadores-time"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
