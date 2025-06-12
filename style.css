@@ -228,3 +228,17 @@ li {
 .btn-excluir:hover {
   background: #cc0000;
 }
+
+.estatisticas-container {
+  display: flex; /* ou grid, dependendo do seu layout preferido */
+  justify-content: space-around; /* Distribui o espaço entre os itens */
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.estatisticas-container p {
+  margin: 0 10px; /* Espaçamento entre os parágrafos */
+  text-align: center;
+}
