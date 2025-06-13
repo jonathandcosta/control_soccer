@@ -10,11 +10,12 @@
 
 <body>
   <div class="container">
-    <h1>Cadastro de Atletas</h1>
+    <h1>Pelada MEL - 21 Anos 🙌</h1>
+    <h3>Registrar Atletas ⚽</h3>
     <form id="formAtleta">
       <div class="input-group">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" required placeholder="Digite o nome do atleta">
+        <input type="text" id="nome" required placeholder="Digite nome do atleta">
       </div>
 
       <div class="input-group">
@@ -43,13 +44,15 @@
         </select>
       </div>
 
-      <button type="submit">Cadastrar</button>
+      <button type="submit">Registrar Jogador</button>
     </form>
 
     <!-- filtros -->
+    <div>
+       <h3>Filtrar Atletas Listados 👇</h3>
     <div class="filtros-minimalista">
       <select id="filtroPosicao" class="filtro-input">
-        <option value="TODOS">Todas as posições</option>
+        <option value="TODOS">Posição</option>
         <option value="GOL">Goleiro</option>
         <option value="ZAG">Zagueiro</option>
         <option value="LE">Lateral Esq.</option>
@@ -60,12 +63,13 @@
       </select>
 
       <select id="filtroCriterio" class="filtro-input">
-        <option value="TODOS">Todos os critérios</option>
+        <option value="TODOS">Critérios</option>
         <option value="MENSALISTA">Mensalista</option>
         <option value="ASSIDUO">Assíduo</option>
         <option value="AMBOS">Mensalista + Assíduo</option>
       </select>
       <button id="aplicarFiltro" class="filtro-botao">Filtrar</button>
+    </div>
     </div>
 
     <div>
@@ -73,12 +77,11 @@
     </div>
 
     <!-- Lista de Atletas (Parte 2) -->
-    <h2>Atletas Cadastrados</h2>
+      <h2>Atletas Cadastrados</h2>
     <div id="listaAtletas">
       <ul id="atletasCadastrados"></ul>
     </div>
 
-  </div>
 
   <div class="times-container">
     <div class="time" id="timeAzul">
@@ -95,15 +98,16 @@
     </div>
   </div>
 
-    <div class="estatisticas">
-  <h3>Estatísticas dos Atletas</h3>
-  <div class="estatisticas-container">
-    <p>Total de Atletas Cadastrados: <span id="totalAtletas">0</span></p>
-    <p>Mensalistas: <span id="totalMensalistas">0</span></p>
-    <p>Assíduos: <span id="totalAssiduos">0</span></p>
-    <p>Convidados: <span id="totalConvidados">0</span></p>
+  <div class="estatisticas">
+    <h3>Estatísticas dos Atletas</h3>
+    <div class="estatisticas-container">
+      <p>Mensalistas: <span id="totalMensalistas">0</span></p>
+      <p>Assíduos: <span id="totalAssiduos">0</span></p>
+      <p>Convidados: <span id="totalConvidados">0</span></p>
+      <p>Total de Atletas Cadastrados: <span id="totalAtletas">0</span></p>
+    </div>
   </div>
-</div>
+  </div>
 
   <script src="script.js"></script>
 </body>
