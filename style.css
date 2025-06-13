@@ -267,3 +267,13 @@ li {
   margin: 0 ; /* Espaçamento entre os parágrafos */
 /*   text-align: center; */
 }
+
+.rodape {
+  background: #feff01;
+  padding: 5px;
+  margin-top: 20px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 10px;
+}
