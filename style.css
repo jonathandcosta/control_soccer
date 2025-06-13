@@ -6,6 +6,7 @@ body {
 }
 
 .container {
+  width: 400px;
   max-width: 600px;
   margin: 0 auto;
   background: white;
@@ -15,17 +16,25 @@ body {
 }
 
 h1,
-h2 {
+h2, h3 {
   color: #333;
 }
 
+form  {
+  background: #fb1;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 .input-group {
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
+  
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
   font-weight: bold;
 }
 
@@ -33,8 +42,9 @@ input[type='text'],
 select {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 4px;
+  margin-left: 5px;
 }
 
 #nome {
@@ -43,7 +53,13 @@ select {
 
 .checkbox-group {
   display: flex;
-  gap: 15px;
+  gap: 5px;
+  align-items: center;
+}
+
+.checkbox-group input {
+  margin: 0;
+  margin-left: 5px;
 }
 
 button {
@@ -62,9 +78,12 @@ button:hover {
 .filtros-minimalista {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 20px;
   align-items: center;
+  background: #4285f4;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 .filtro-input {
@@ -96,6 +115,10 @@ button:hover {
 
 .filtro-botao:hover {
   background: #45a049;
+}
+
+.backgroud-2 {
+  background: #fff;
 }
 
 #listaAtletas {
@@ -230,8 +253,10 @@ li {
 }
 
 .estatisticas-container {
-  display: flex; /* ou grid, dependendo do seu layout preferido */
-  justify-content: space-around; /* Distribui o espaço entre os itens */
+  display: block;
+/*   display: flex; /* ou grid, dependendo do seu layout preferido */ */
+/*   flex-wrap: wrap; */
+/*   justify-content: space-around; /* Distribui o espaço entre os itens */ */
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -239,6 +264,6 @@ li {
 }
 
 .estatisticas-container p {
-  margin: 0 10px; /* Espaçamento entre os parágrafos */
-  text-align: center;
+  margin: 0 ; /* Espaçamento entre os parágrafos */
+/*   text-align: center; */
 }
